@@ -9,7 +9,7 @@ export const registerHendler = async (data) => {
         }
     })
 
-    if (admin) throw new Error('email sudah ada')
+    if (admin) throw Error('email sudah ada')
 
     const hashedPassword = await hash(data.password, 10)
 

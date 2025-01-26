@@ -19,6 +19,7 @@ model Admin {
   email      String      @unique @db.VarChar(75)
   password   String
   createdAt  DateTime    @default(now()) @map("created_at")
+  updateAt   DateTime    @default(now()) @map("update_at")
   Borrowings Borrowing[]
 
   @@map("admins")
