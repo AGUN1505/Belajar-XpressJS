@@ -21,3 +21,16 @@ export const registerValidator = Joi.object({
         'any.only' : 'passwordnya dak sama wuuu?'
     }),
 })
+
+export const loginValidator = Joi.object({
+    email: Joi.string().email().required().messages({
+        'string.email': 'email salah',
+        'string.empty': 'email harus di isi dong',
+        'any.required' : 'isi dong emailnya'
+    }),
+    password: Joi.string().min(6).required().messages({
+        'string.min': 'isi lebih dari 6 ya',
+        'string.empty': 'password harus di isi dong',
+        'any.required' : 'isi dong passwordnya'
+    }),
+})
