@@ -3,7 +3,7 @@ import Joi from "joi"
 export const registerValidator = Joi.object({
     name: Joi.string().required().messages({
         'string.empty': 'nama harus di isi dong',
-        'any.required' : 'isi dong'
+        'any.required' : 'isi dong namanya'
     }),
     email: Joi.string().email().required().messages({
         'string.email': 'email salah',
