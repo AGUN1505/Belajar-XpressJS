@@ -21,11 +21,6 @@ export const bookSchema = joi.object({
         'any.required': 'year harus diisi',
         'number.base': 'year harus berupa angka'
     }),
-    cover: joi.string().required().messages({
-        'string.empty': 'cover tidak boleh kosong',
-        'any.required': 'cover harus diisi',
-        'string.base': 'cover harus berupa teks'
-    }),
     quantity: joi.number().required().messages({
         'number.empty': 'quantity tidak boleh kosong',
         'any.required': 'quantity harus diisi',

@@ -16,6 +16,6 @@ export const auth = async (req, res, next) => {
 
         next()
     } catch (error) {
-        next(error)
+        next(error401('token expired, please login again'))
     }
 }

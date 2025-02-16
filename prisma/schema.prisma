@@ -33,7 +33,10 @@ model Book {
   year       Int?
   cover      String?
   quantity   Int         @default(0)
+  currentQty Int         @default(0) @map("current_qty")
   createdAt  DateTime    @default(now()) @map("created_at")
+  updateAt   DateTime    @default(now()) @map("update_at")
+  deletedAt  DateTime?   @map("deleted_at")
   Borrowings Borrowing[]
 
   @@map("books")
